@@ -4,778 +4,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية - رزنامة الولاية</title>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+    <title>رزنامة الولاية - رفيقك الدائم لإحياء الشعائر</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #388A6F;
-            --background-light: #F0F0F0;
-            --card-light: #FFFFFF;
-            --text-primary: #303030;
-            --text-secondary: #646568;
-            --text-white: #FFFFFF;
-            --gradient-primary: linear-gradient(135deg, #388A6F 0%, #2C6B56 100%);
-            --shadow-soft: 0 10px 30px rgba(56, 138, 111, 0.1);
-            --shadow-card: 0 8px 25px rgba(0, 0, 0, 0.08);
-            --border-radius: 16px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
-            background: var(--background-light);
-            color: var(--text-primary);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        /* Background Pattern */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background:
-                radial-gradient(circle at 20% 20%, rgba(56, 138, 111, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(56, 138, 111, 0.03) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        /* Header */
-        .header {
-            background: var(--gradient-primary);
-            padding: 60px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="islamic-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M10 0L20 10L10 20L0 10Z" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23islamic-pattern)"/></svg>');
-            animation: float 20s ease-in-out infinite;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-10px) rotate(1deg);
-            }
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .logo {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 25px;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(15px);
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            box-shadow:
-                0 10px 30px rgba(0, 0, 0, 0.1),
-                0 0 0 1px rgba(255, 255, 255, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
-            animation: logoFloat 3s ease-in-out infinite;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .logo::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            animation: shimmer 2s infinite;
-            pointer-events: none;
-        }
-
-        @keyframes logoFloat {
-
-            0%,
-            100% {
-                transform: translateY(0px) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-5px) rotate(1deg);
-            }
-        }
-
-        @keyframes shimmer {
-            0% {
-                transform: translateX(-100%) translateY(-100%) rotate(45deg);
-            }
-
-            100% {
-                transform: translateX(100%) translateY(100%) rotate(45deg);
-            }
-        }
-
-        .logo img {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-        }
-
-        .header h1 {
-            font-size: 3.2rem;
-            font-weight: 700;
-            color: var(--text-white);
-            margin-bottom: 15px;
-            text-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-            animation: titleGlow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes titleGlow {
-            0% {
-                text-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-            }
-
-            100% {
-                text-shadow: 0 3px 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.3);
-            }
-        }
-
-        .header p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 300;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Content */
-        .content {
-            margin: -40px auto 60px;
-            position: relative;
-            z-index: 3;
-        }
-
-        .card {
-            background: var(--card-light);
-            border-radius: var(--border-radius);
-            padding: 45px;
-            margin-bottom: 35px;
-            box-shadow: var(--shadow-card);
-            border: 1px solid rgba(56, 138, 111, 0.08);
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--gradient-primary);
-            animation: borderGlow 3s ease-in-out infinite;
-        }
-
-        .card::after {
-            content: '';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 60px;
-            height: 60px;
-            background: rgba(56, 138, 111, 0.03);
-            border-radius: 50%;
-            opacity: 0;
-            transition: all 0.3s ease;
-            animation: floatingCircle 4s ease-in-out infinite;
-        }
-
-        .card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow:
-                0 20px 50px rgba(56, 138, 111, 0.15),
-                0 0 0 1px rgba(56, 138, 111, 0.05);
-        }
-
-        .card:hover::after {
-            opacity: 1;
-            animation-play-state: paused;
-        }
-
-        @keyframes borderGlow {
-
-            0%,
-            100% {
-                box-shadow: 0 0 0 rgba(56, 138, 111, 0.3);
-            }
-
-            50% {
-                box-shadow: 0 0 20px rgba(56, 138, 111, 0.2);
-            }
-        }
-
-        @keyframes floatingCircle {
-
-            0%,
-            100% {
-                transform: translateY(0px) translateX(0px);
-            }
-
-            25% {
-                transform: translateY(-10px) translateX(10px);
-            }
-
-            50% {
-                transform: translateY(-5px) translateX(-5px);
-            }
-
-            75% {
-                transform: translateY(5px) translateX(5px);
-            }
-        }
-
-        .update-date {
-            background: linear-gradient(135deg, rgba(56, 138, 111, 0.1) 0%, rgba(56, 138, 111, 0.05) 100%);
-            color: var(--primary);
-            padding: 20px 30px;
-            border-radius: 15px;
-            font-weight: 500;
-            margin-bottom: 35px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border: 2px solid rgba(56, 138, 111, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .update-date::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            animation: dateShimmer 3s infinite;
-        }
-
-        .update-date i {
-            font-size: 1.2rem;
-            animation: calendarSpin 4s linear infinite;
-        }
-
-        @keyframes dateShimmer {
-            0% {
-                left: -100%;
-            }
-
-            100% {
-                left: 100%;
-            }
-        }
-
-        @keyframes calendarSpin {
-
-            0%,
-            90% {
-                transform: rotate(0deg);
-            }
-
-            95% {
-                transform: rotate(10deg);
-            }
-
-            100% {
-                transform: rotate(0deg);
-            }
-        }
-
-        .intro {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-            padding: 25px;
-            background: rgba(56, 138, 111, 0.02);
-            border-radius: 12px;
-            border-right: 4px solid var(--primary);
-        }
-
-        .section {
-            margin-bottom: 35px;
-        }
-
-        .section h2 {
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            position: relative;
-        }
-
-        .section h2::before {
-            content: '';
-            width: 12px;
-            height: 12px;
-            background: var(--primary);
-            border-radius: 50%;
-            display: block;
-            animation: iconPulse 2s ease-in-out infinite;
-        }
-
-        .section h2 i {
-            color: var(--primary);
-            font-size: 1.4rem;
-            margin-left: 5px;
-            animation: iconBounce 2s ease-in-out infinite;
-        }
-
-        @keyframes iconPulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-
-            50% {
-                transform: scale(1.2);
-                opacity: 0.8;
-            }
-        }
-
-        @keyframes iconBounce {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-3px);
-            }
-        }
-
-        .section p {
-            margin-bottom: 15px;
-            color: var(--text-primary);
-        }
-
-        .section ul {
-            list-style: none;
-            padding-right: 20px;
-        }
-
-        .section li {
-            margin-bottom: 12px;
-            position: relative;
-            padding-right: 25px;
-            color: var(--text-primary);
-        }
-
-        .section li::before {
-            content: '◆';
-            position: absolute;
-            right: 0;
-            top: 0;
-            color: var(--primary);
-            font-size: 0.8rem;
-        }
-
-        .section strong {
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: var(--gradient-primary);
-            color: var(--text-white);
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .contact-section::before {
-            background: none;
-        }
-
-        .contact-section h2 {
-            color: var(--text-white);
-            margin-bottom: 20px;
-        }
-
-        .contact-section h2::before {
-            background: var(--text-white);
-        }
-
-        .contact-section p {
-            color: var(--text-white);
-            opacity: 0.95;
-            margin-bottom: 25px;
-        }
-
-        .contact-info {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            font-size: 1.1rem;
-            margin-top: 20px;
-            padding: 20px 30px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .contact-info:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
-        }
-
-        .contact-info i {
-            font-size: 1.4rem;
-            animation: emailBounce 2s ease-in-out infinite;
-        }
-
-        @keyframes emailBounce {
-
-            0%,
-            100% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-5px) rotate(5deg);
-            }
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--text-primary);
-            color: var(--text-white);
-            text-align: center;
-            padding: 40px 0;
-            margin-top: 60px;
-        }
-
-        .footer p {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5rem;
-            }
-
-            .header p {
-                font-size: 1rem;
-            }
-
-            .card {
-                padding: 30px;
-                margin-bottom: 25px;
-            }
-
-            .content {
-                margin-top: -30px;
-            }
-
-            .logo {
-                width: 100px;
-                height: 100px;
-            }
-
-            .logo img {
-                width: 65px;
-                height: 65px;
-            }
-        }
-
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Glass Effect */
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeIn 0.8s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .card:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .card:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .card:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-
-        .card:nth-child(4) {
-            animation-delay: 0.4s;
-        }
-
-        .card:nth-child(5) {
-            animation-delay: 0.5s;
-        }
-
-        .card:nth-child(6) {
-            animation-delay: 0.6s;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">
-                <img src="logo.png" alt="شعار رزنامة الولاية">
+    Loading Animation
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="logo.png" alt="رزنامة الولاية">
             </div>
-            <h1>سياسة الخصوصية</h1>
-            <h2 style="color: #FFFFFF;">تطبيق رزنامة الولاية</h2>
+            <div class="loader-text">رزنامة الولاية</div>
+            <div class="loader-spinner"></div>
         </div>
-    </header>
+    </div>
 
-    <!-- Content -->
-    <main class="content">
-        <div class="container">
-            <!-- Update Date -->
-            <div class="card fade-in">
-                <div class="update-date">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>تاريخ آخر تحديث: 16 يوليو 2025</span>
+    Navigation
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="رزنامة الولاية">
+                <span>رزنامة الولاية</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">المميزات</a>
+                <a href="#screenshots" class="nav-link">الشاشات</a>
+                <a href="#contact" class="nav-link">اتصل بنا</a>
+                <a href="privacy.html" class="nav-link">الخصوصية</a>
+            </div>
+            <div class="nav-cta">
+                <a href="https://play.google.com/store/apps/details?id=com.dev_aqeel.ruznamat_app" class="btn-primary"
+                    target="_blank">
+                    تحميل التطبيق
+                </a>
+            </div>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+            <div class="floating-elements">
+                <div class="floating-element" style="--delay: 0s; --duration: 8s;"></div>
+                <div class="floating-element" style="--delay: 2s; --duration: 10s;"></div>
+                <div class="floating-element" style="--delay: 4s; --duration: 12s;"></div>
+            </div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge animate-fade-up">
+                    <span class="badge-text">جديد: تحديث 2025</span>
+                    <span class="badge-link">اكتشف المزيد</span>
                 </div>
-
-                <div class="intro">
-                    نحن في تطبيق "رزنامة الولاية" نولي أهمية كبيرة لخصوصية مستخدمينا. توضح سياسة
-                    الخصوصية هذه كيفية التعامل مع البيانات عند استخدامك لتطبيقنا.
+                <h1 class="hero-title animate-fade-up">
+                    <span class="title-line">مرجعك الدقيق</span>
+                    <span class="title-line">للمناسبات الدينية</span>
+                </h1>
+                <p class="hero-subtitle animate-fade-up">
+                    تطبيق رزنامة الولاية يوفر لك تقويماً هجرياً دقيقاً معتمداً من مكتب سماحة السيد السيستاني،
+                    مع نظام إشعارات ذكي يبقيك على اطلاع دائم بجميع المناسبات الدينية والعطل الرسمية.
+                </p>
+                <div class="hero-actions animate-fade-up">
+                    <a href="https://play.google.com/store/apps/details?id=com.dev_aqeel.ruznamat_app"
+                        class="btn-primary btn-large" target="_blank">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7,10 12,15 17,10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        تحميل مجاني
+                    </a>
+                    <button class="btn-secondary btn-large" id="watchDemo">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5,3 19,12 5,21" />
+                        </svg>
+                        مشاهدة العرض
+                    </button>
                 </div>
             </div>
-
-            <!-- Section 1 -->
-            <div class="card fade-in">
-                <div class="section">
-                    <h2><i class="fas fa-info-circle"></i> جمع واستخدام المعلومات</h2>
-                    <p>تطبيق "رزنامة الولاية" مصمم ليكون مرجعك الديني دون الحاجة لجمع معلوماتك الشخصية.</p>
-
-                    <ul>
-                        <li><strong>المعلومات التي لا نجمعها:</strong> نحن لا نقوم بجمع أو طلب أو تخزين أي معلومات تعريف
-                            شخصية مثل اسمك، عنوان بريدك الإلكتروني، رقم هاتفك، أو موقعك الجغرافي.</li>
-
-                        <li><strong>المعلومات التي يعالجها التطبيق محلياً:</strong>
-                            <ul style="margin-top: 10px;">
-                                <li><strong>بيانات التقويم والمناسبات:</strong> يقوم التطبيق بتحميل ومزامنة بيانات
-                                    التقويم والمناسبات الدينية والعطل الرسمية. يتم تخزين هذه البيانات بشكل آمن على جهازك
-                                    فقط (Offline Caching) لتوفير تجربة سريعة وعمل التطبيق بدون انترنت. لا يمكننا الوصول
-                                    إلى هذه البيانات.</li>
-                                <li><strong>إعدادات المستخدم:</strong> يتم حفظ تفضيلاتك، مثل الثيم (الوضع الليلي)،
-                                    محلياً على جهازك.</li>
-                                <li><strong>سجل الإشعارات:</strong> عند تفعيل الإشعارات، يتم حفظ سجل بالإشعارات التي تم
-                                    إرسالها على جهازك فقط لكي تتمكن من مراجعتها لاحقاً.</li>
-                            </ul>
-                        </li>
-
-                        <li><strong>المعلومات التقنية (غير الشخصية):</strong> عند قيام التطبيق بمزامنة البيانات من
-                            خادمنا لأول مرة أو عند وجود تحديث، قد يتم تسجيل معلومات تقنية أساسية مثل عنوان IP الخاص
-                            باتصالك بالإنترنت في سجلات الخادم. هذه ممارسة قياسية لكل الخدمات على الإنترنت، ويتم استخدام
-                            هذه البيانات بشكل مجهول لأغراض تحليلية لتحسين أداء الخادم وحمايته، ولا يتم ربطها بهويتك
-                            الشخصية.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Section 2 -->
-            <div class="card fade-in">
-                <div class="section">
-                    <h2><i class="fas fa-bell"></i> الإشعارات المحلية</h2>
-                    <p>إذا قمت بتفعيل ميزة الإشعارات، سيقوم التطبيق بجدولة إشعارات محلية على جهازك لتذكيرك بالمناسبات
-                        القادمة. هذه العملية تتم بالكامل على جهازك ولا تتطلب إرسال أي بيانات شخصية إلى خوادمنا.</p>
-                </div>
-            </div>
-
-            <!-- Section 3 -->
-            <div class="card fade-in">
-                <div class="section">
-                    <h2><i class="fas fa-share-alt"></i> مشاركة البيانات</h2>
-                    <p>بما أننا لا نجمع بيانات شخصية، فلا يوجد لدينا ما نشاركه مع أي أطراف ثالثة.</p>
-                </div>
-            </div>
-
-            <!-- Section 4 -->
-            <div class="card fade-in">
-                <div class="section">
-                    <h2><i class="fas fa-shield-alt"></i> أمن البيانات</h2>
-                    <p>نحن نتخذ الإجراءات اللازمة لتأمين الاتصال بين التطبيق والخادم. أمان البيانات المخزنة محلياً على
-                        جهازك يعتمد على أمان نظام تشغيل هاتفك.</p>
-                </div>
-            </div>
-
-            <!-- Section 5 -->
-            <div class="card fade-in">
-                <div class="section">
-                    <h2><i class="fas fa-edit"></i> تغييرات على سياسة الخصوصية</h2>
-                    <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنقوم بإعلامك بأي تغييرات عبر نشر السياسة الجديدة
-                        على هذه الصفحة.</p>
-                </div>
-            </div>
-
-            <!-- Contact Section -->
-            <div class="card contact-section fade-in">
-                <div class="section">
-                    <h2><i class="fas fa-envelope"></i> اتصل بنا</h2>
-                    <p>إذا كان لديك أي أسئلة حول سياسة الخصوصية، يمكنك التواصل معنا:</p>
-                    <div class="contact-info">
-                        <i class="fas fa-envelope"></i>
-                        <span>dev.aqeelali@gmail.com</span>
+            <div class="hero-visual animate-fade-up">
+                <div class="phone-carousel">
+                    <div class="carousel-container">
+                        <div class="phone-stack" id="phoneStack">
+                            <div class="phone-mockup carousel-phone active" data-index="0">
+                                <div class="phone-frame">
+                                    <img src="screen1.jpg" alt="الشاشة الرئيسية" class="phone-screen">
+                                </div>
+                            </div>
+                            <div class="phone-mockup carousel-phone" data-index="1">
+                                <div class="phone-frame">
+                                    <img src="screen2.jpg" alt="شاشة التقويم" class="phone-screen">
+                                </div>
+                            </div>
+                            <div class="phone-mockup carousel-phone" data-index="2">
+                                <div class="phone-frame">
+                                    <img src="screen3.jpg" alt="تفاصيل المناسبة" class="phone-screen">
+                                </div>
+                            </div>
+                            <div class="phone-mockup carousel-phone" data-index="3">
+                                <div class="phone-frame">
+                                    <img src="screen4.jpg" alt="الإعدادات" class="phone-screen">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn prev-btn" id="prevBtn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="15,18 9,12 15,6" />
+                                </svg>
+                            </button>
+                            <button class="carousel-btn next-btn" id="nextBtn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9,18 15,12 9,6" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Footer -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">مميزات استثنائية</h2>
+                <p class="section-subtitle">
+                    تطبيق شامل ومتطور يجمع بين الدقة والسهولة في الاستخدام
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                            <line x1="16" y1="2" x2="16" y2="6" />
+                            <line x1="8" y1="2" x2="8" y2="6" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">تقويم دقيق ومعتمد</h3>
+                    <p class="feature-description">
+                        تقويم هجري معتمد من مكتب سماحة السيد السيستاني، محدث سنوياً بأعلى معايير الدقة
+                    </p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">إشعارات ذكية</h3>
+                    <p class="feature-description">
+                        نظام تذكير متطور يرسل إشعارات قبل المناسبات بيوم وفي نفس اليوم
+                    </p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                            <polyline points="3.27,6.96 12,12.01 20.73,6.96" />
+                            <line x1="12" y1="22.08" x2="12" y2="12" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">تصميم عصري</h3>
+                    <p class="feature-description">
+                        واجهة مستخدم أنيقة ومريحة للعين مع دعم الوضع الليلي والنهاري
+                    </p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">محتوى شامل</h3>
+                    <p class="feature-description">
+                        جميع المناسبات الدينية والعطل الرسمية مع تفاصيل دقيقة ومعلومات مفيدة
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="screenshots" id="screenshots">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">شاهد التطبيق في العمل</h2>
+                <p class="section-subtitle">
+                    تصفح شاشات التطبيق واكتشف سهولة الاستخدام والتصميم الأنيق
+                </p>
+            </div>
+            <div class="screenshots-showcase">
+                <div class="screenshots-container">
+                    <div class="screenshot-item animate-on-scroll">
+                        <div class="phone-mockup-modern">
+                            <div class="phone-frame-modern">
+                                <img src="screen1.jpg" alt="الشاشة الرئيسية" class="phone-screen-modern">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h4>الشاشة الرئيسية</h4>
+                            <p>عرض سريع للمناسبات القادمة</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-item animate-on-scroll">
+                        <div class="phone-mockup-modern">
+                            <div class="phone-frame-modern">
+                                <img src="screen2.jpg" alt="التقويم الشهري" class="phone-screen-modern">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h4>التقويم الشهري</h4>
+                            <p>عرض شامل لجميع أيام الشهر</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-item animate-on-scroll">
+                        <div class="phone-mockup-modern">
+                            <div class="phone-frame-modern">
+                                <img src="screen3.jpg" alt="تفاصيل المناسبة" class="phone-screen-modern">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h4>تفاصيل المناسبة</h4>
+                            <p>معلومات مفصلة عن كل مناسبة</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-item animate-on-scroll">
+                        <div class="phone-mockup-modern">
+                            <div class="phone-frame-modern">
+                                <img src="screen4.jpg" alt="الإعدادات" class="phone-screen-modern">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h4>الإعدادات</h4>
+                            <p>تخصيص التطبيق حسب احتياجاتك</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content animate-on-scroll">
+                <h2 class="cta-title">ابدأ رحلتك الروحانية اليوم</h2>
+                <p class="cta-subtitle">
+                    انضم إلى أكثر من 50,000 مستخدم يثقون برزنامة الولاية لمتابعة مناسباتهم الدينية
+                </p>
+                <div class="cta-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.dev_aqeel.ruznamat_app"
+                        class="btn-primary btn-large" target="_blank">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7,10 12,15 17,10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        تحميل مجاني من Google Play
+                    </a>
+                </div>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12" />
+                        </svg>
+                        <span>تحميل مجاني</span>
+                    </div>
+                    <div class="cta-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12" />
+                        </svg>
+                        <span>بدون إعلانات</span>
+                    </div>
+                    <div class="cta-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12" />
+                        </svg>
+                        <span>تحديثات دورية</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content animate-on-scroll">
+                <div class="contact-info">
+                    <h2 class="contact-title">تواصل معنا</h2>
+                    <p class="contact-description">
+                        نحن هنا لمساعدتك. إذا كان لديك أي أسئلة أو اقتراحات، لا تتردد في التواصل معنا
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:dev.aqeelali@gmail.com" class="contact-method">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>البريد الإلكتروني</h4>
+                                <p>dev.aqeelali@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    Footer
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 تطبيق رزنامة الولاية. جميع الحقوق محفوظة.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="رزنامة الولاية">
+                        <span>رزنامة الولاية</span>
+                    </div>
+                    <p class="footer-description">
+                        مرجعك الدقيق للمناسبات الدينية والعطل الرسمية
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>روابط مهمة</h4>
+                        <ul>
+                            <li><a href="#features">المميزات</a></li>
+                            <li><a href="#screenshots">الشاشات</a></li>
+                            <li><a href="#contact">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>القانونية</h4>
+                        <ul>
+                            <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                            <li><a href="#">شروط الاستخدام</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 تطبيق رزنامة الولاية. جميع الحقوق محفوظة.</p>
+            </div>
         </div>
     </footer>
 
-    <script>
-        // Add smooth reveal animations with enhanced effects
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-
-                    // Add sparkle effect
-                    const sparkles = entry.target.querySelectorAll('.section h2 i');
-                    sparkles.forEach(sparkle => {
-                        sparkle.style.animation = 'iconBounce 2s ease-in-out infinite';
-                    });
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Enhanced floating animation for cards
-        document.querySelectorAll('.card').forEach((card, index) => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-8px) scale(1.02)';
-
-                // Add ripple effect
-                const ripple = document.createElement('div');
-                ripple.style.cssText = `
-                    position: absolute;
-                    border-radius: 50%;
-                    background: rgba(56, 138, 111, 0.1);
-                    transform: scale(0);
-                    animation: ripple 0.6s linear;
-                    pointer-events: none;
-                `;
-
-                const rect = card.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                ripple.style.width = ripple.style.height = size + 'px';
-                ripple.style.left = (rect.width / 2 - size / 2) + 'px';
-                ripple.style.top = (rect.height / 2 - size / 2) + 'px';
-
-                card.appendChild(ripple);
-
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
-            });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Add CSS for ripple animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

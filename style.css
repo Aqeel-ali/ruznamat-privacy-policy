@@ -132,18 +132,18 @@ body {
 }
 
 .loader-logo {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto var(--space-md);
+    width: 100px;
+    height: 130px;
+    /* margin: 0 0 0 0;
     border-radius: var(--radius-md);
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-lg); */
 }
 
 .loader-logo img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .loader-text {
@@ -161,6 +161,7 @@ body {
     border-radius: 50%;
     margin: 0 auto;
     animation: spin 1s linear infinite;
+    margin-top: 20px;
 }
 
 @keyframes spin {
@@ -718,13 +719,15 @@ body {
 .carousel-phone .phone-frame::before {
     content: "";
     position: absolute;
-    top: 8px;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
-    height: 6px;
-    background: #333;
-    border-radius: 3px;
+    width: 80px;
+    height: 24px;
+    background: #000;
+    /* لون أسود ليتطابق مع الشاشة */
+    border-radius: 16px;
+    /* نصف الارتفاع للحصول على شكل كبسولة (Pill Shape) */
     z-index: 2;
 }
 
@@ -865,13 +868,15 @@ body {
 .phone-frame-modern::before {
     content: "";
     position: absolute;
-    top: 6px;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    width: 40px;
-    height: 4px;
-    background: #333;
-    border-radius: 2px;
+    width: 65px;
+    height: 18px;
+    background: #000;
+    /* لون أسود ليتطابق مع الشاشة */
+    border-radius: 12px;
+    /* نصف الارتفاع للحصول على شكل كبسولة (Pill Shape) */
     z-index: 2;
 }
 

@@ -8,15 +8,21 @@
     <meta name="description" content="تطبيق رزنامة الولاية يعرض تقويماً هجرياً معتمداً من مكتب سماحة السيد السيستاني، ومناسبات الشيعة، مناسبات اليوم، وفيات الأعلام، مع مواقيت الأهلة الرسمية.">
     <meta name="keywords" content="تقويم هجري, مناسبات الشيعة, مناسبات اليوم, وفيات الشيعة, رزنامة دينية, موعد الهلال, تقويم قمري, مناسبات دينية, مواقيت الأهلة, السيد السيستاني">
     <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="رزنامة الولاية - تقويم هجري معتمد ومناسبات الشيعة">
     <meta property="og:description" content="برنامج تقويم هجري شيعي يعرض مناسبات اليوم، مناسبات دينية، وفيات الأعلام معتمد على مواقيت الأهلة من مكتب سماحة السيد السيستاني.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_AR">
     <meta property="og:image" content="logo.png">
+    
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="رزنامة الولاية - تقويم هجري معتمد ومناسبات الشيعة">
     <meta name="twitter:description" content="تطبيق تقويم هجري شيعي يعرض مناسبات اليوم والمناسبات الدينية والوفيات وفق مواقيت الأهلة الرسمية.">
     <meta name="twitter:image" content="logo.png">
+    
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
         [{
             "@context": "https://schema.org",
@@ -47,16 +53,30 @@
             }
         }]
     </script>
+    
     <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- Google Fonts - IBM Plex Sans Arabic Only (No Tajawal) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Library (Icons Only, No Emojis!) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Premium Glowing Background Orbs for Glassmorphism Depth -->
+    <div class="glowing-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Modern Glassmorphic Loader -->
     <div class="loader" id="loader">
         <div class="loader-content">
             <div class="loader-logo">
@@ -66,22 +86,29 @@
         </div>
     </div>
 
+    <!-- Header Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
+            <a href="#" class="nav-logo">
                 <img src="logo.png" alt="رزنامة الولاية">
                 <span>رزنامة الولاية</span>
-            </div>
+            </a>
             <div class="nav-links">
-                <a href="#features" class="nav-link">المميزات</a>
-                <a href="#screenshots" class="nav-link">الشاشات</a>
-                <a href="#contact" class="nav-link">اتصل بنا</a>
-                <a href="privacy.html" class="nav-link">الخصوصية</a>
+                <a href="#features" class="nav-link"><i class="fa-solid fa-star-of-life nav-link-icon"></i>المميزات</a>
+                <a href="#screenshots" class="nav-link"><i class="fa-solid fa-mobile-screen-button nav-link-icon"></i>الشاشات</a>
+                <a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane nav-link-icon"></i>اتصل بنا</a>
+                <a href="privacy.html" class="nav-link"><i class="fa-solid fa-shield-halved nav-link-icon"></i>الخصوصية</a>
+                <div class="nav-drawer-cta">
+                    <a href="https://play.google.com/store/apps/details?id=com.dev_aqeel.ruznamat_app" class="btn-primary btn-shimmer" target="_blank">
+                        <i class="fa-brands fa-google-play"></i>
+                        <span>تحميل التطبيق</span>
+                    </a>
+                </div>
             </div>
             <div class="nav-cta">
-                <a href="https://play.google.com/store/apps/details?id=com.dev_aqeel.ruznamat_app" class="btn-primary"
-                    target="_blank">
-                    تحميل التطبيق
+                <a href="https://play.google.com/store/apps/details?id=com.dev_aqeel.ruznamat_app" class="btn-primary" target="_blank">
+                    <i class="fa-brands fa-google-play"></i>
+                    <span>تحميل التطبيق</span>
                 </a>
             </div>
             <div class="mobile-menu-toggle" id="mobileMenuToggle">
@@ -92,86 +119,76 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-background">
-            <div class="hero-gradient"></div>
-            <div class="floating-elements">
-                <div class="floating-element" style="--delay: 0s; --duration: 8s;"></div>
-                <div class="floating-element" style="--delay: 2s; --duration: 10s;"></div>
-                <div class="floating-element" style="--delay: 4s; --duration: 12s;"></div>
-            </div>
-        </div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge animate-fade-up">
-                    <span class="badge-text">جديد: تحديث 2025</span>
-                    <span class="badge-link">اكتشف المزيد</span>
+                    <span class="badge-icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
+                    <span class="badge-text">تحديث هجري معتمد 1447 هـ</span>
                 </div>
                 <h1 class="hero-title animate-fade-up">
-                    <span class="title-line">مرجعك الدقيق</span>
+                    <span class="title-line text-gradient">مرجعك الدقيق</span>
                     <span class="title-line">للمناسبات الدينية</span>
                 </h1>
                 <p class="hero-subtitle animate-fade-up">
-                    تطبيق رزنامة الولاية يوفر لك تقويماً هجرياً دقيقاً معتمداً من مكتب سماحة السيد السيستاني،
-                    مع نظام إشعارات ذكي يبقيك على اطلاع دائم بجميع المناسبات الدينية والعطل الرسمية.
+                    تطبيق رزنامة الولاية يوفر لك تقويماً هجرياً دقيقاً معتمداً من مكتب سماحة السيد السيستاني دام ظله، مع نظام إشعارات ذكي يبقيك على اطلاع دائم بجميع المناسبات الدينية والوفيات ومواقيت الأهلة الرسمية.
                 </p>
                 <p class="hero-keywords animate-fade-up">
-                    رزنامة الولاية هو تطبيق تقويم هجري شيعي موثوق يعرض مناسبات اليوم، مناسبات الشيعة، مناسبات دينية، وفيات العلماء والأولياء، ومواعيد الهلال وفق
-                    مواقيت الأهلة الرسمية الصادرة عن مكتب سماحة المرجع الأعلى السيد علي السيستاني.
+                    رزنامة الولاية هو تطبيق تقويم هجري شيعي موثوق يعرض مناسبات اليوم، مناسبات الشيعة، وفيات العلماء والأولياء، ومواعيد الهلال وفق مواقيت الأهلة الرسمية الصادرة عن مكتب سماحة المرجع الأعلى السيد علي السيستاني.
                 </p>
                 <div class="hero-actions animate-fade-up">
-                    <a href="https://play.google.com/store/apps/details?id=com.dev_aqeel.ruznamat_app"
-                        class="btn-primary btn-large" target="_blank">
-                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                            <polyline points="7,10 12,15 17,10" />
-                            <line x1="12" y1="15" x2="12" y2="3" />
-                        </svg>
-                        تحميل مجاني
+                    <a href="https://play.google.com/store/apps/details?id=com.dev_aqeel.ruznamat_app" class="btn-primary btn-large btn-shimmer" target="_blank">
+                        <i class="fa-brands fa-google-play"></i>
+                        <span>تحميل مجاني</span>
                     </a>
                     <button class="btn-secondary btn-large" id="watchDemo">
-                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="5,3 19,12 5,21" />
-                        </svg>
-                        مشاهدة العرض
+                        <i class="fa-solid fa-circle-play"></i>
+                        <span>مشاهدة العرض</span>
                     </button>
                 </div>
             </div>
+            
             <div class="hero-visual animate-fade-up">
                 <div class="phone-carousel">
                     <div class="carousel-container">
                         <div class="phone-stack" id="phoneStack">
-                            <div class="phone-mockup carousel-phone active" data-index="0">
-                                <div class="phone-frame">
-                                    <img src="screen1.jpg" alt="الشاشة الرئيسية" class="phone-screen">
+                            <!-- iPhone 17 Mockups inside the carousel -->
+                            <div class="phone-mockup-iphone17 carousel-phone active" data-index="0">
+                                <div class="iphone17-frame">
+                                    <div class="iphone17-island"></div>
+                                    <div class="iphone17-glass-reflection"></div>
+                                    <img src="screen1.jpg" alt="الشاشة الرئيسية" class="iphone17-screen">
                                 </div>
                             </div>
-                            <div class="phone-mockup carousel-phone" data-index="1">
-                                <div class="phone-frame">
-                                    <img src="screen2.jpg" alt="شاشة التقويم" class="phone-screen">
+                            <div class="phone-mockup-iphone17 carousel-phone" data-index="1">
+                                <div class="iphone17-frame">
+                                    <div class="iphone17-island"></div>
+                                    <div class="iphone17-glass-reflection"></div>
+                                    <img src="screen2.jpg" alt="شاشة التقويم" class="iphone17-screen">
                                 </div>
                             </div>
-                            <div class="phone-mockup carousel-phone" data-index="2">
-                                <div class="phone-frame">
-                                    <img src="screen3.jpg" alt="تفاصيل المناسبة" class="phone-screen">
+                            <div class="phone-mockup-iphone17 carousel-phone" data-index="2">
+                                <div class="iphone17-frame">
+                                    <div class="iphone17-island"></div>
+                                    <div class="iphone17-glass-reflection"></div>
+                                    <img src="screen3.jpg" alt="تفاصيل المناسبة" class="iphone17-screen">
                                 </div>
                             </div>
-                            <div class="phone-mockup carousel-phone" data-index="3">
-                                <div class="phone-frame">
-                                    <img src="screen4.jpg" alt="الاشعارات" class="phone-screen">
+                            <div class="phone-mockup-iphone17 carousel-phone" data-index="3">
+                                <div class="iphone17-frame">
+                                    <div class="iphone17-island"></div>
+                                    <div class="iphone17-glass-reflection"></div>
+                                    <img src="screen4.jpg" alt="الاشعارات" class="iphone17-screen">
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-controls">
-                            <button class="carousel-btn next-btn" id="nextBtn">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="9,18 15,12 9,6" />
-                                </svg>
+                            <button class="carousel-btn next-btn" id="nextBtn" aria-label="التالي">
+                                <i class="fa-solid fa-chevron-right"></i>
                             </button>
-                            <button class="carousel-btn prev-btn" id="prevBtn">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="15,18 9,12 15,6" />
-                                </svg>
+                            <button class="carousel-btn prev-btn" id="prevBtn" aria-label="السابق">
+                                <i class="fa-solid fa-chevron-left"></i>
                             </button>
                         </div>
                     </div>
@@ -180,124 +197,119 @@
         </div>
     </section>
 
+    <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
             <div class="section-header animate-on-scroll">
-                <h2 class="section-title">مميزات استثنائية</h2>
+                <span class="section-badge"><i class="fa-solid fa-shapes"></i> مزايا التطبيق</span>
+                <h2 class="section-title">مميزات استثنائية للمؤمنين</h2>
                 <p class="section-subtitle">
-                    تطبيق شامل ومتطور يجمع بين الدقة والسهولة في الاستخدام
+                    تطبيق شامل ومتطور يجمع بين الدقة المتناهية والسهولة الفائقة في الاستخدام
                 </p>
             </div>
             <div class="features-grid">
                 <div class="feature-card animate-on-scroll">
                     <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                            <line x1="16" y1="2" x2="16" y2="6" />
-                            <line x1="8" y1="2" x2="8" y2="6" />
-                            <line x1="3" y1="10" x2="21" y2="10" />
-                        </svg>
+                        <i class="fa-solid fa-calendar-check"></i>
                     </div>
                     <h3 class="feature-title">تقويم دقيق ومعتمد</h3>
                     <p class="feature-description">
-                        تقويم هجري معتمد من مكتب سماحة السيد السيستاني، محدث سنوياً بأعلى معايير الدقة
+                        تقويم هجري معتمد بالكامل من مكتب سماحة السيد السيستاني، محدث بدقة متناهية سنوياً ومطابق للأهلة الرسمية.
                     </p>
                 </div>
                 <div class="feature-card animate-on-scroll">
                     <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
-                            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
-                        </svg>
+                        <i class="fa-solid fa-bell"></i>
                     </div>
-                    <h3 class="feature-title">إشعارات ذكية</h3>
+                    <h3 class="feature-title">إشعارات ذكية متطورة</h3>
                     <p class="feature-description">
-                        نظام تذكير متطور يرسل إشعارات قبل المناسبات بيوم وفي نفس اليوم
+                        نظام تذكير متقدم ينبهك قبل المناسبات الدينية والوفيات بيوم وفي نفس اليوم لتكون دائماً على تواصل روحي.
                     </p>
                 </div>
                 <div class="feature-card animate-on-scroll">
                     <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                            <polyline points="3.27,6.96 12,12.01 20.73,6.96" />
-                            <line x1="12" y1="22.08" x2="12" y2="12" />
-                        </svg>
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
                     </div>
-                    <h3 class="feature-title">تصميم عصري</h3>
+                    <h3 class="feature-title">تصميم عصري راقٍ</h3>
                     <p class="feature-description">
-                        واجهة مستخدم أنيقة ومريحة للعين مع دعم الوضع الليلي والنهاري
+                        واجهة مستخدم زجاجية مذهلة ومريحة للعين مع دعم متكامل للوضعين الليلي والنهاري بألوان زمردية دافئة.
                     </p>
                 </div>
                 <div class="feature-card animate-on-scroll">
                     <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <ellipse cx="12" cy="5" rx="9" ry="3" />
-                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-                        </svg>
+                        <i class="fa-solid fa-kaaba"></i>
                     </div>
-                    <h3 class="feature-title">منسبات وتواريخ الشيعة</h3>
+                    <h3 class="feature-title">مناسبات الشيعة والعلماء</h3>
                     <p class="feature-description">
-                        عرض مناسبات الشيعة، مناسبات اليوم، ذكرى الوفاة والعزاء مع تحديث سنوي دقيق.
+                        تغطية شاملة لمناسبات الشيعة، مناسبات اليوم، وفيات الأعلام والعلماء والأولياء مع تفاصيل تاريخية كاملة.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Screenshots Showcase Section -->
     <section class="screenshots" id="screenshots">
         <div class="container">
             <div class="section-header animate-on-scroll">
+                <span class="section-badge"><i class="fa-solid fa-images"></i> معرض الشاشات</span>
                 <h2 class="section-title">شاهد التطبيق في العمل</h2>
                 <p class="section-subtitle">
-                    تصفح شاشات التطبيق واكتشف سهولة الاستخدام والتصميم الأنيق
+                    تصفح شاشات تطبيق رزنامة الولاية واكتشف روعة التفاصيل وجمال التصميم
                 </p>
             </div>
             <div class="screenshots-showcase">
                 <div class="screenshots-container">
                     <div class="screenshot-item animate-on-scroll">
-                        <div class="phone-mockup-modern">
-                            <div class="phone-frame-modern">
-                                <img src="screen1.jpg" alt="الشاشة الرئيسية" class="phone-screen-modern">
+                        <div class="phone-mockup-iphone17-modern">
+                            <div class="iphone17-frame">
+                                <div class="iphone17-island"></div>
+                                <div class="iphone17-glass-reflection"></div>
+                                <img src="screen1.jpg" alt="الشاشة الرئيسية" class="iphone17-screen">
                             </div>
                         </div>
                         <div class="screenshot-info">
                             <h4>الشاشة الرئيسية</h4>
-                            <p>واجهة بسيطة تعرض التقويم</p>
+                            <p>عرض تفاصيل اليوم والمناسبة الحالية بسلاسة</p>
                         </div>
                     </div>
                     <div class="screenshot-item animate-on-scroll">
-                        <div class="phone-mockup-modern">
-                            <div class="phone-frame-modern">
-                                <img src="screen2.jpg" alt="التقويم الشهري" class="phone-screen-modern">
+                        <div class="phone-mockup-iphone17-modern">
+                            <div class="iphone17-frame">
+                                <div class="iphone17-island"></div>
+                                <div class="iphone17-glass-reflection"></div>
+                                <img src="screen2.jpg" alt="التقويم الشهري" class="iphone17-screen">
                             </div>
                         </div>
                         <div class="screenshot-info">
                             <h4>التقويم الشهري</h4>
-                            <p>مشاهدة المناسبات القادمة</p>
+                            <p>تصفح المناسبات القادمة والسابقة بسهولة تامة</p>
                         </div>
                     </div>
                     <div class="screenshot-item animate-on-scroll">
-                        <div class="phone-mockup-modern">
-                            <div class="phone-frame-modern">
-                                <img src="screen3.jpg" alt="تفاصيل المناسبة" class="phone-screen-modern">
+                        <div class="phone-mockup-iphone17-modern">
+                            <div class="iphone17-frame">
+                                <div class="iphone17-island"></div>
+                                <div class="iphone17-glass-reflection"></div>
+                                <img src="screen3.jpg" alt="تفاصيل المناسبة" class="iphone17-screen">
                             </div>
                         </div>
                         <div class="screenshot-info">
                             <h4>تفاصيل المناسبة</h4>
-                            <p>البحث عن اي مناسبة لرؤية تفاصيلها</p>
+                            <p>البحث وقراءة السير والتفاصيل الدينية للوفيات والولادات</p>
                         </div>
                     </div>
                     <div class="screenshot-item animate-on-scroll">
-                        <div class="phone-mockup-modern">
-                            <div class="phone-frame-modern">
-                                <img src="screen4.jpg" alt="الإعدادات" class="phone-screen-modern">
+                        <div class="phone-mockup-iphone17-modern">
+                            <div class="iphone17-frame">
+                                <div class="iphone17-island"></div>
+                                <div class="iphone17-glass-reflection"></div>
+                                <img src="screen4.jpg" alt="الإعدادات والإشعارات" class="iphone17-screen">
                             </div>
                         </div>
                         <div class="screenshot-info">
-                            <h4>الاشعارات</h4>
-                            <p>اشعارات قبل المناسبات</p>
+                            <h4>الإشعارات الذكية</h4>
+                            <p>تخصيص كامل للأوقات والتنبيهات المسبقة للمناسبات</p>
                         </div>
                     </div>
                 </div>
@@ -305,67 +317,54 @@
         </div>
     </section>
 
+    <!-- Call To Action Section -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content animate-on-scroll">
                 <h2 class="cta-title">ابدأ رحلتك الروحانية اليوم</h2>
                 <p class="cta-subtitle">
-                    انضم إلى أكثر من 50,000 مستخدم يثقون برزنامة الولاية لمتابعة مناسباتهم الدينية
+                    انضم إلى أكثر من 50,000 مستخدم يثقون بتطبيق رزنامة الولاية لتوثيق ومتابعة مناسباتهم الدينية والروحية اليومية
                 </p>
                 <div class="cta-actions">
-                    <a href="https://play.google.com/store/apps/details?id=com.dev_aqeel.ruznamat_app"
-                        class="btn-primary btn-large" target="_blank">
-                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                            <polyline points="7,10 12,15 17,10" />
-                            <line x1="12" y1="15" x2="12" y2="3" />
-                        </svg>
-                        تحميل مجاني من Google Play
+                    <a href="https://play.google.com/store/apps/details?id=com.dev_aqeel.ruznamat_app" class="btn-primary btn-large btn-shimmer" target="_blank">
+                        <i class="fa-brands fa-google-play"></i>
+                        <span>تحميل مجاني من Google Play</span>
                     </a>
                 </div>
                 <div class="cta-features">
                     <div class="cta-feature">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="20,6 9,17 4,12" />
-                        </svg>
-                        <span>تحميل مجاني</span>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>مجاني بالكامل</span>
                     </div>
                     <div class="cta-feature">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="20,6 9,17 4,12" />
-                        </svg>
-                        <span>بدون إعلانات</span>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>خالٍ تماماً من الإعلانات</span>
                     </div>
                     <div class="cta-feature">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="20,6 9,17 4,12" />
-                        </svg>
-                        <span>تحديثات دورية</span>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>تحديثات سنوية دورية وموثوقة</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact-content animate-on-scroll">
                 <div class="contact-info">
                     <h2 class="contact-title">تواصل معنا</h2>
                     <p class="contact-description">
-                        نحن هنا لمساعدتك. إذا كان لديك أي أسئلة أو اقتراحات، لا تتردد في التواصل معنا
+                        يسعدنا الاستماع لملاحظاتك واقتراحاتك لتطوير التطبيق وخدمة المؤمنين بشكل أفضل
                     </p>
                     <div class="contact-methods">
                         <a href="mailto:dev.aqeelali@gmail.com" class="contact-method">
                             <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                                    <polyline points="22,6 12,13 2,6" />
-                                </svg>
+                                <i class="fa-solid fa-envelope-open-text"></i>
                             </div>
                             <div class="contact-details">
-                                <h4>البريد الإلكتروني</h4>
+                                <h4>البريد الإلكتروني المباشر</h4>
                                 <p>dev.aqeelali@gmail.com</p>
                             </div>
                         </a>
@@ -375,6 +374,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -384,33 +384,34 @@
                         <span>رزنامة الولاية</span>
                     </div>
                     <p class="footer-description">
-                        مرجعك الدقيق للمناسبات الدينية والعطل الرسمية
+                        مرجعك التقويمي الموثوق للمناسبات الدينية، الوفيات، والولادات وفق الضوابط الشرعية للأهلة.
                     </p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-section">
-                        <h4>روابط مهمة</h4>
+                        <h4>روابط هامة</h4>
                         <ul>
-                            <li><a href="#features">المميزات</a></li>
-                            <li><a href="#screenshots">الشاشات</a></li>
-                            <li><a href="#contact">اتصل بنا</a></li>
+                            <li><a href="#features"><i class="fa-solid fa-chevron-left link-bullet"></i>المميزات</a></li>
+                            <li><a href="#screenshots"><i class="fa-solid fa-chevron-left link-bullet"></i>الشاشات</a></li>
+                            <li><a href="#contact"><i class="fa-solid fa-chevron-left link-bullet"></i>اتصل بنا</a></li>
                         </ul>
                     </div>
                     <div class="footer-section">
                         <h4>القانونية</h4>
                         <ul>
-                            <li><a href="privacy.html">سياسة الخصوصية</a></li>
-                            <li><a href="#">شروط الاستخدام</a></li>
+                            <li><a href="privacy.html"><i class="fa-solid fa-chevron-left link-bullet"></i>سياسة الخصوصية</a></li>
+                            <li><a href="privacy_policy_site.html"><i class="fa-solid fa-chevron-left link-bullet"></i>اتفاقية الاستخدام</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 تطبيق رزنامة الولاية. جميع الحقوق محفوظة.</p>
+                <p>&copy; 2026 تطبيق رزنامة الولاية. جميع الحقوق محفوظة لـ Aqeel Ali.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Main JavaScript Code -->
     <script src="script.js"></script>
 </body>
 
